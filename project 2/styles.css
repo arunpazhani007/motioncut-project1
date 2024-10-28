@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-box h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: 0.5s ease;
+}
+
+.input-box label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.login-btn {
+    background-color: #3498db;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #2980b9;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.links a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .login-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .login-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
